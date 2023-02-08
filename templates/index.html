@@ -10,8 +10,7 @@
     <h1>Customer Order List</h1>
     {% for order in orders %}
     <p> 
-       {{ order.customer_name }}: {{ order.oder_date}} {{ order.book_title}} {{ order.quantity}}
-
+      <a href="/orders/0"> {{ order.customer_name }}: {{ order.oder_date}} {{ order.book_title}} {{ order.quantity}} </a>
     </p>
 
     {% endfor %}

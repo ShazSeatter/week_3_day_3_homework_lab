@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Unbounded&display=swap" rel="stylesheet">
-    <title>Customer Orders</title>
+    <title>{{ title }} Customer Orders</title>
 </head>
 <body>
     <main>
@@ -17,12 +17,16 @@
             <p>Date</p>
             <p>Book</p>
             <p>Quantity</p> 
+            <p>Order Info</p>
     {% for order in orders %}
             <p>{{ order.customer_name }}</p>
             <p>{{ order.order_date}}</p>
             <p>{{ order.book_title}}</p>
             <p>{{ order.quantity}} </p>
+           <a href="/orders/{{orders.index(order)}}"> Show Order </a>
     {% endfor %}
+
+    
 </section>
 </main>
 </body>
